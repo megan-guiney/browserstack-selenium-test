@@ -11,8 +11,8 @@ Basic Browserstack-integrated selenium-python test suite, to be run from jenkins
   - [X] Verify that the Galaxy S20+ is listed on the Favorites page
 - Run across the following three browsers:
   - [x] Windows 10 Chrome
-  - [] macOS Ventura Firefox
-  - [] Samsung Galaxy S22
+  - [ ] macOS Ventura Firefox
+  - [ ] Samsung Galaxy S22
   - [ ] Run in parallel across the 3
 - [ ] Be Executed from Jenkins server
 - [X] Be uploaded as GitHub Repo
