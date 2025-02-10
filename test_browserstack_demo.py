@@ -14,10 +14,6 @@ from browserstack.local import Local  # Required for BrowserStack Local
 
 class TestBStackLogin(unittest.TestCase):
 
-    # @classmethod
-    # def setUpClass(cls):
-    #    print("")
-
     def setUp(self):
         print("Ensuring base class is setUp properly", flush=True)
         super().setUp()
@@ -29,6 +25,7 @@ class TestBStackLogin(unittest.TestCase):
                 "BrowserStack credentials not found in environment variables!")
         # TODO: clean up browser string with embedded driver creds
         browserstackURL = f"https://{driverUser}:{driverPasswd}@hub-cloud.browserstack.com/wd/hub"
+
         self.driver = webdriver.Remote(
             command_executor=browserstackURL,
             # Options are dynamically set from browserstack.yml
