@@ -58,7 +58,7 @@ class TestBStackLogin(unittest.TestCase):
                 EC.presence_of_element_located((By.ID, "react-select-2-input"))
             )
             print("entering username" + DEMO_USR, flush=True)
-            username_input.send_keys(DEMO_USR)  # Type username
+            username_input.send_keys(DEMO_USER)  # Type username
             username_input.send_keys(Keys.RETURN)  # Select it
             # Repeat the same steps for password selection
             print("getting password dropdown", flush=True)
@@ -70,7 +70,7 @@ class TestBStackLogin(unittest.TestCase):
                 EC.presence_of_element_located((By.ID, "react-select-3-input"))
             )
             print("entering passwd", flush=True)
-            password_input.send_keys(DEMO_PASSWD)  # Type password
+            password_input.send_keys(DEMO_PASSWORD)  # Type password
             password_input.send_keys(Keys.RETURN)  # Select it
             # Click the login buttonA
             print("clicking login button", Flush=True)
