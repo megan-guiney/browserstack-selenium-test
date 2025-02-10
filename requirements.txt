@@ -1,4 +1,5 @@
-browserstack-python
 browserstack-sdk
 chromedriver
+pytest-browserstack
+pytest
 selenium
