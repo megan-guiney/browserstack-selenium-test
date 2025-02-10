@@ -38,8 +38,8 @@ class TestBStackLogin(unittest.TestCase):
     def test_favorite(self):
         # set variables from env
         # TODO: clean up to better methodology
-        DEMO_USR = os.environ.get("DEMO_USER")
-        DEMO_PASSWD = os.environ.get("DEMO_PASSWD")
+        DEMO_USER = os.environ.get("DEMO_USER")
+        DEMO_PASSWORD = os.environ.get("DEMO_PASSWORD")
         driver = self.driver
 
         # Login to site
@@ -57,7 +57,7 @@ class TestBStackLogin(unittest.TestCase):
             username_input = WebDriverWait(driver, 10).until(
                 EC.presence_of_element_located((By.ID, "react-select-2-input"))
             )
-            print("entering username" + DEMO_USR, flush=True)
+            print("entering username" + DEMO_USER, flush=True)
             username_input.send_keys(DEMO_USER)  # Type username
             username_input.send_keys(Keys.RETURN)  # Select it
             # Repeat the same steps for password selection
