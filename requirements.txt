@@ -1,3 +1,4 @@
+browserstack-python
 browserstack-sdk
 chromedriver
 selenium
