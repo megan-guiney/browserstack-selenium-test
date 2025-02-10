@@ -73,10 +73,10 @@ class TestBStackLogin(unittest.TestCase):
             password_input.send_keys(DEMO_PASSWORD)  # Type password
             password_input.send_keys(Keys.RETURN)  # Select it
             # Click the login buttonA
-            print("clicking login button", Flush=True)
+            print("clicking login button", flush=True)
             login_button = driver.find_element(By.ID, "login-btn")
             login_button.click()
-            print("--> Login successful!", Flush=True)
+            print("--> Login successful!", flush=True)
 
             print("Filtering Samsung devices...", flush=True)
             WebDriverWait(driver, 10).until(
