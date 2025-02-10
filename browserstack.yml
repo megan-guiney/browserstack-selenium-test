@@ -3,7 +3,6 @@
 # =============================
 # Add your BrowserStack userName and accessKey here or set BROWSERSTACK_USERNAME and
 # BROWSERSTACK_ACCESS_KEY as env variables
-# NOTE: These have been set as env variables
 
 # ======================
 # BrowserStack Reporting
@@ -38,9 +37,6 @@ platforms:
     browserName: Samsung
     osVersion: 12.0
 
-
-  selenium:
-          test_suite: "./test_browserstack_demo.py"
 
 # ==========================================
 # BrowserStack Local
