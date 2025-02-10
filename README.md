@@ -10,13 +10,13 @@ Basic Browserstack-integrated selenium-python test suite, to be run from jenkins
   - [X] Favorite the "Galaxy S20+" device by clicking the yellow heart icon
   - [X] Verify that the Galaxy S20+ is listed on the Favorites page
 - Run across the following three browsers:
-  - [x] Windows 10 Chrome
-  - [ ] macOS Ventura Firefox
-  - [ ] Samsung Galaxy S22
-  - [ ] Run in parallel across the 3
-- [ ] Be Executed from Jenkins server
+  - [X] Windows 10 Chrome
+  - [X] macOS Ventura Firefox
+  - [X] Samsung Galaxy S22
+  - [X] Run in parallel across the 3
+- [X] Be Executed from Jenkins server
 - [X] Be uploaded as GitHub Repo
-- [ ] Include proof of Jenkins pipeline (screenshots or pipeline code)
+- [X] Include proof of Jenkins pipeline (screenshots or pipeline code)
 
 # Setup Notes:
 - Must be set up in a python 3.8 venv
