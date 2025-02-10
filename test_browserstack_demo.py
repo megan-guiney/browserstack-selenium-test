@@ -48,7 +48,6 @@ class TestBStackLogin(unittest.TestCase):
         driver.maximize_window()
         try:
             # Wait for the username dropdown container to be visible and click it
-            print("getting username dropdown", flush=True)
             username_dropdown = WebDriverWait(driver, 10).until(
                 EC.element_to_be_clickable((By.ID, "username"))
             )
@@ -57,11 +56,9 @@ class TestBStackLogin(unittest.TestCase):
             username_input = WebDriverWait(driver, 10).until(
                 EC.presence_of_element_located((By.ID, "react-select-2-input"))
             )
-            print("entering username" + DEMO_USER, flush=True)
             username_input.send_keys(DEMO_USER)  # Type username
             username_input.send_keys(Keys.RETURN)  # Select it
             # Repeat the same steps for password selection
-            print("getting password dropdown", flush=True)
             password_dropdown = WebDriverWait(driver, 10).until(
                 EC.element_to_be_clickable((By.ID, "password"))
             )
@@ -69,7 +66,6 @@ class TestBStackLogin(unittest.TestCase):
             password_input = WebDriverWait(driver, 10).until(
                 EC.presence_of_element_located((By.ID, "react-select-3-input"))
             )
-            print("entering passwd", flush=True)
             password_input.send_keys(DEMO_PASSWORD)  # Type password
             password_input.send_keys(Keys.RETURN)  # Select it
             # Click the login buttonA
