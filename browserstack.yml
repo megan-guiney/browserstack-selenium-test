@@ -38,6 +38,10 @@ platforms:
     browserName: Samsung
     osVersion: 12.0
 
+
+  selenium:
+          test_suite: "./test_browserstack_demo.py"
+
 # ==========================================
 # BrowserStack Local
 # (For localhost, staging/private websites)
