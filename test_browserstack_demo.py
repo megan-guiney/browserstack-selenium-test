@@ -43,12 +43,12 @@ class TestBStackLogin(unittest.TestCase):
         driver = self.driver
 
         # Login to site
-        print("Logging in...")
+        print("Logging in...", flush=True)
         driver.get(self.baseURL + "signin")
         driver.maximize_window()
         try:
             # Wait for the username dropdown container to be visible and click it
-            print("getting username dropdown")
+            print("getting username dropdown", flush=True)
             username_dropdown = WebDriverWait(driver, 10).until(
                 EC.element_to_be_clickable((By.ID, "username"))
             )
@@ -57,11 +57,11 @@ class TestBStackLogin(unittest.TestCase):
             username_input = WebDriverWait(driver, 10).until(
                 EC.presence_of_element_located((By.ID, "react-select-2-input"))
             )
-            print("entering username")
+            print("entering username" + DEMO_USR, flush=True)
             username_input.send_keys(DEMO_USR)  # Type username
             username_input.send_keys(Keys.RETURN)  # Select it
             # Repeat the same steps for password selection
-            print("getting password dropdown")
+            print("getting password dropdown", flush=True)
             password_dropdown = WebDriverWait(driver, 10).until(
                 EC.element_to_be_clickable((By.ID, "password"))
             )
@@ -69,16 +69,16 @@ class TestBStackLogin(unittest.TestCase):
             password_input = WebDriverWait(driver, 10).until(
                 EC.presence_of_element_located((By.ID, "react-select-3-input"))
             )
-            print("entering passwd")
+            print("entering passwd", flush=True)
             password_input.send_keys(DEMO_PASSWD)  # Type password
             password_input.send_keys(Keys.RETURN)  # Select it
             # Click the login buttonA
-            print("clicking login button")
+            print("clicking login button", Flush=True)
             login_button = driver.find_element(By.ID, "login-btn")
             login_button.click()
-            print("--> Login successful!")
+            print("--> Login successful!", Flush=True)
 
-            print("Filtering Samsung devices...")
+            print("Filtering Samsung devices...", flush=True)
             WebDriverWait(driver, 10).until(
                 EC.element_to_be_clickable(
                     (By.XPATH, "//span[text()='Apple']//ancestor::label"))
@@ -86,15 +86,15 @@ class TestBStackLogin(unittest.TestCase):
             samsung_filter = driver.find_element(
                 By.XPATH, "//span[text()='Samsung']//ancestor::label")
             samsung_filter.click()
-            print("--> Samsung devices filtered!")
+            print("--> Samsung devices filtered!", flush=True)
 
-            print("Favoriting the Galaxy S20+...")
+            print("Favoriting the Galaxy S20+...", flush=True)
             favorite_button = WebDriverWait(driver, 10).until(
                 EC.element_to_be_clickable(
                     (By.XPATH, "//p[text()='Galaxy S20+']/ancestor::div[contains(@class, 'shelf-item')]//button"))
             )
             favorite_button.click()
-            print("--> Favorite button pressed!")
+            print("--> 'Favorite' button pressed!", flush=True)
 
             print("Verifying that the Galazy S20+ was successfully added to Favorites...")
 
@@ -105,10 +105,10 @@ class TestBStackLogin(unittest.TestCase):
             )
             assert driver.find_element(
                 By.XPATH, "//p[text()='Galaxy S20+']").is_displayed(), "Galaxy S20+ is not in Favorites!"
-            print("--> Test Passed: Galaxy S20+ can be added to Favorites")
+            print("--> Test Passed: Galaxy S20+ can be added to Favorites", flush=True)
 
         except Exception as e:
-            print("Error: " + str(e))
+            print("Error: " + str(e), flush=True)
 
     def tearDown(self):
         self.driver.quit()
